@@ -1,0 +1,96 @@
+.sidebar {
+    height: 100%;
+    width: 200px; 
+    position: fixed; 
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px;
+    padding-left: 50px
+}
+
+.sidebar p{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: Andale Mono, monospace;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: black;
+    display: block;
+}
+
+.sidebar a{ /* make "Jacob Yosowitz" and "About" sepereate from the photo links */
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: Andale Mono, monospace;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+}
+
+.sidebar a {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+  
+.sidebar a:before, a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: grey;
+}
+  
+  
+.sidebar a:hover:before {
+    background: gray;
+    width: 100%;
+}
+  
+.sidebar a:hover:after {
+    background: transparent;
+    width: 100%; 
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 6rem;
+    padding-left: 300px;
+    padding-right: 1rem;
+    padding-top: 50px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tile:nth-child(1),
+.tile:nth-child(8){
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.tile:nth-child(2),
+.tile:nth-child(7){
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.tile:nth-child(3),
+.tile:nth-child(4),
+.tile:nth-child(5),
+.tile:nth-child(6),
+.tile:nth-child(9),
+.tile:nth-child(10) {
+    grid-column: span 3;
+}
+

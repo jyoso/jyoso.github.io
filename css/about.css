@@ -1,0 +1,76 @@
+.sidebar {
+    height: 100%;
+    width: 200px; 
+    position: fixed; 
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px;
+    padding-left: 50px
+}
+
+.sidebar p{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: Andale Mono, monospace;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: black;
+    display: block;
+}
+
+.sidebar a { /* make "Jacob Yosowitz" and "About" sepereate from the photo links */
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: Andale Mono, monospace;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+}
+
+a {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+  
+a:before, a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: grey;
+}
+  
+  
+a:hover:before {
+    background: gray;
+    width: 100%;
+}
+  
+a:hover:after {
+    background: transparent;
+    width: 100%; 
+}
+
+.container{ 
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: Andale Mono, monospace;
+    font-size: 15px;
+    color: black;
+    padding-left: 300px;
+    padding-top: 32px;
+    padding-right: 1000px;
+    line-height: 20px;
+}
+
+.container img{
+    height: 700px;
+    width: auto;
+    padding-bottom: 1rem;
+}
